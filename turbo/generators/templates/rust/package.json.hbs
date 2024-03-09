@@ -1,0 +1,37 @@
+{
+  "name": "@typescript-rust-turbo/{{ dashCase name }}",
+  "version": "0.0.0",
+	"private": "true",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "{{ dashCase name }}",
+    "triples": {}
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.0",
+		"@typescript-rust-turbo/eslint-config": "*",
+    "@typescript-rust-turbo/jest-presets": "*",
+    "@typescript-rust-turbo/typescript-config": "*",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.24",
+    "jest": "^29.7.0",
+		"typescript": "^5.4.2"
+  },
+	"jest": {
+    "preset": "@typescript-rust-turbo/jest-presets/jest/node"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "jest",
+    "universal": "napi universal",
+    "version": "napi version"
+  }
+}

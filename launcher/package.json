@@ -1,0 +1,27 @@
+{
+  "name": "launcher",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsup --watch --onSuccess \"node dist/index.js\"",
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "test": "jest --detectOpenHandles"
+  },
+  "jest": {
+    "preset": "@typescript-rust-turbo/jest-presets/jest/node"
+  },
+  "devDependencies": {
+    "@typescript-rust-turbo/eslint-config": "*",
+    "@typescript-rust-turbo/jest-presets": "*",
+    "@typescript-rust-turbo/typescript-config": "*",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.24",
+    "jest": "^29.7.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2"
+  }
+}

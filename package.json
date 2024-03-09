@@ -1,0 +1,29 @@
+{
+  "name": "typescript-rust-turbo",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "new": "turbo gen"
+  },
+  "devDependencies": {
+    "@typescript-rust-turbo/eslint-config": "*",
+    "@typescript-rust-turbo/typescript-config": "*",
+    "@turbo/gen": "^1.12.5",
+    "@types/cross-spawn": "^6.0.6",
+    "cross-spawn": "^7.0.3",
+    "json5": "^2.2.3",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "yarn@4.1.1",
+  "workspaces": [
+    "docs",
+    "launcher",
+    "packages/*"
+  ]
+}

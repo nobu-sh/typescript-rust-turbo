@@ -1,0 +1,9 @@
+import { foo } from "..";
+
+describe("foo function", () => {
+  it("should return '@typescript-rust-turbo/{{ dashCase name }}'", () => {
+    const expectedOutput = "@typescript-rust-turbo/{{ dashCase name }}";
+    const result = foo();
+    expect(result).toBe(expectedOutput);
+  });
+});
