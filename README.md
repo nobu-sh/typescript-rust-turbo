@@ -1,6 +1,6 @@
 # Typescript Rust Turbo Boilerplate
 
-A quickstart boilerplate for a [Turbo](https://turbo.build/) with [Yarn Berry](https://yarnpkg.com). I originally made this template for [SerenityJS](https://github.com/SerenityJS/serenity). We needed a centralized solution where we could keep packages made in [TypeScript](https://www.typescriptlang.org/) and packages made in [Rust](https://www.rust-lang.org/) using [napi-rs](https://napi.rs/) to expose node engine binaries.
+A quickstart boilerplate for a [Turbo](https://turbo.build/) monorepo with [Yarn Berry](https://yarnpkg.com). I originally made this template for [SerenityJS](https://github.com/SerenityJS/serenity). We needed a centralized solution where we could keep packages made in [TypeScript](https://www.typescriptlang.org/) and packages made in [Rust](https://www.rust-lang.org/) using [napi-rs](https://napi.rs/) to expose node engine binaries.
 
 Instead of the traditional `/apps` directory we only needed [launcher](./launcher) and [docs](./docs) app so we kept them in the root. This should be relatively easy to change back if you fancy that more.
 
