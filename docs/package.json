@@ -14,11 +14,11 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@typescript-rust-turbo/eslint-config": "*",
-    "@typescript-rust-turbo/typescript-config": "*",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-rust-turbo/eslint-config": "*",
+    "@typescript-rust-turbo/typescript-config": "*",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "postcss": "^8",

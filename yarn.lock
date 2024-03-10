@@ -1259,34 +1259,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-rust-turbo/eslint-config@npm:*, @typescript-rust-turbo/eslint-config@workspace:packages/eslint-config":
-  version: 0.0.0-use.local
-  resolution: "@typescript-rust-turbo/eslint-config@workspace:packages/eslint-config"
-  dependencies:
-    "@ariesclark/eslint-config": "npm:^1.6.10"
-    eslint: "npm:^8.57.0"
-    eslint-config-turbo: "npm:^1.12.5"
-    typescript: "npm:^5.4.2"
-  languageName: unknown
-  linkType: soft
-
-"@typescript-rust-turbo/jest-presets@npm:*, @typescript-rust-turbo/jest-presets@workspace:packages/jest-presets":
-  version: 0.0.0-use.local
-  resolution: "@typescript-rust-turbo/jest-presets@workspace:packages/jest-presets"
-  dependencies:
-    jest: "npm:^29.7.0"
-    jest-environment-jsdom: "npm:^29.7.0"
-    ts-jest: "npm:^29.1.2"
-    typescript: "npm:^5.4.2"
-  languageName: unknown
-  linkType: soft
-
-"@typescript-rust-turbo/typescript-config@npm:*, @typescript-rust-turbo/typescript-config@workspace:packages/typescript-config":
-  version: 0.0.0-use.local
-  resolution: "@typescript-rust-turbo/typescript-config@workspace:packages/typescript-config"
-  languageName: unknown
-  linkType: soft
-
 "@sinclair/typebox@npm:^0.27.8":
   version: 0.27.8
   resolution: "@sinclair/typebox@npm:0.27.8"
@@ -1784,6 +1756,34 @@ __metadata:
   checksum: 10c0/7395f69739cfa1cb83c1fb2fad30afa2a814756367302fb4facd5893eff66abc807e8d8f63eba94ed3b0fe0c1c996ac9a1680bcbf0f83717acedc3f2bb724fbf
   languageName: node
   linkType: hard
+
+"@typescript-rust-turbo/eslint-config@npm:*, @typescript-rust-turbo/eslint-config@workspace:packages/eslint-config":
+  version: 0.0.0-use.local
+  resolution: "@typescript-rust-turbo/eslint-config@workspace:packages/eslint-config"
+  dependencies:
+    "@ariesclark/eslint-config": "npm:^1.6.10"
+    eslint: "npm:^8.57.0"
+    eslint-config-turbo: "npm:^1.12.5"
+    typescript: "npm:^5.4.2"
+  languageName: unknown
+  linkType: soft
+
+"@typescript-rust-turbo/jest-presets@npm:*, @typescript-rust-turbo/jest-presets@workspace:packages/jest-presets":
+  version: 0.0.0-use.local
+  resolution: "@typescript-rust-turbo/jest-presets@workspace:packages/jest-presets"
+  dependencies:
+    jest: "npm:^29.7.0"
+    jest-environment-jsdom: "npm:^29.7.0"
+    ts-jest: "npm:^29.1.2"
+    typescript: "npm:^5.4.2"
+  languageName: unknown
+  linkType: soft
+
+"@typescript-rust-turbo/typescript-config@npm:*, @typescript-rust-turbo/typescript-config@workspace:packages/typescript-config":
+  version: 0.0.0-use.local
+  resolution: "@typescript-rust-turbo/typescript-config@workspace:packages/typescript-config"
+  languageName: unknown
+  linkType: soft
 
 "@ungap/structured-clone@npm:^1.2.0":
   version: 1.2.0
@@ -3102,11 +3102,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "docs@workspace:docs"
   dependencies:
-    "@typescript-rust-turbo/eslint-config": "npm:*"
-    "@typescript-rust-turbo/typescript-config": "npm:*"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@typescript-rust-turbo/eslint-config": "npm:*"
+    "@typescript-rust-turbo/typescript-config": "npm:*"
     autoprefixer: "npm:^10.0.1"
     eslint: "npm:^8"
     next: "npm:14.1.3"
@@ -5858,11 +5858,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "launcher@workspace:launcher"
   dependencies:
+    "@types/jest": "npm:^29.5.12"
+    "@types/node": "npm:^20.11.24"
     "@typescript-rust-turbo/eslint-config": "npm:*"
     "@typescript-rust-turbo/jest-presets": "npm:*"
     "@typescript-rust-turbo/typescript-config": "npm:*"
-    "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^20.11.24"
     jest: "npm:^29.7.0"
     tsup: "npm:^8.0.2"
     typescript: "npm:^5.4.2"
@@ -7638,20 +7638,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-rust-turbo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "typescript-rust-turbo@workspace:."
-  dependencies:
-    "@typescript-rust-turbo/eslint-config": "npm:*"
-    "@typescript-rust-turbo/typescript-config": "npm:*"
-    "@turbo/gen": "npm:^1.12.5"
-    "@types/cross-spawn": "npm:^6.0.6"
-    cross-spawn: "npm:^7.0.3"
-    json5: "npm:^2.2.3"
-    turbo: "npm:latest"
-  languageName: unknown
-  linkType: soft
-
 "set-function-length@npm:^1.2.1":
   version: 1.2.1
   resolution: "set-function-length@npm:1.2.1"
@@ -8638,6 +8624,20 @@ __metadata:
   checksum: 10c0/5cc0f79196e70a92f8f40846cfa62b3de6be51e83f73655e137116cf65e3c29a288502b18cc8faf33c943c2470a4569009e1d6da338441649a2db2f135761ad5
   languageName: node
   linkType: hard
+
+"typescript-rust-turbo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "typescript-rust-turbo@workspace:."
+  dependencies:
+    "@turbo/gen": "npm:^1.12.5"
+    "@types/cross-spawn": "npm:^6.0.6"
+    "@typescript-rust-turbo/eslint-config": "npm:*"
+    "@typescript-rust-turbo/typescript-config": "npm:*"
+    cross-spawn: "npm:^7.0.3"
+    json5: "npm:^2.2.3"
+    turbo: "npm:latest"
+  languageName: unknown
+  linkType: soft
 
 "typescript@npm:^5, typescript@npm:^5.4.2":
   version: 5.4.2
