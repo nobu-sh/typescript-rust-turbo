@@ -1,6 +1,7 @@
 {
   "name": "@typescript-rust-turbo/jest-presets",
   "version": "0.0.0",
+  "repository": "https://github.com/nobu-sh/typescript-rust-turbo",
   "private": true,
   "license": "MIT",
   "dependencies": {

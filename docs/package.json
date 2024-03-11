@@ -1,6 +1,7 @@
 {
   "name": "docs",
   "version": "1.0.0",
+  "repository": "https://github.com/nobu-sh/typescript-rust-turbo",
   "private": true,
   "scripts": {
     "dev": "next dev",

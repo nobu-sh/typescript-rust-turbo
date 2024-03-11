@@ -1,6 +1,7 @@
 {
   "name": "@typescript-rust-turbo/eslint-config",
   "version": "0.0.0",
+  "repository": "https://github.com/nobu-sh/typescript-rust-turbo",
   "private": true,
   "files": [
     "index.js",

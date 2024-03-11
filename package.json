@@ -1,6 +1,7 @@
 {
   "name": "typescript-rust-turbo",
   "license": "MIT",
+  "repository": "https://github.com/nobu-sh/typescript-rust-turbo",
   "private": true,
   "scripts": {
     "build": "turbo build",
