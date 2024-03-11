@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from "node:fs";
+import { resolve } from "node:path";
 
 import * as JSON5 from "json5";
 import { PlopTypes } from "@turbo/gen";
@@ -26,7 +27,14 @@ interface HelperMin {
 	fn: CallableFunction;
 }
 
+const packageJsonPath = resolve(process.cwd(), "package.json");
+function getPackageJson(): object {
+	return JSON.parse(readFileSync(packageJsonPath, "utf8"));
+}
+
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
+	const package_ = getPackageJson();
+
 	// Add raw block helper
 	plop.addHelper("raw", (options: HelperMin) => options.fn());
 
@@ -107,6 +115,9 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
 				destination: `{{ turbo.paths.root }}/${PackagesRoot}/{{ dashCase name }}`,
 				base: "templates/{{ lowerCase type }}",
 				templateFiles: "templates/{{ lowerCase type }}/**/*",
+				data: {
+					pkg: package_
+				},
 				globOptions: {
 					dot: true
 				},
@@ -117,6 +128,9 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
 				type: "add",
 				path: `{{ turbo.paths.root }}/${WorkflowsLocation}/{{ dashCase name }}-ci.yml`,
 				templateFile: "templates/rust-ci.yml.hbs",
+				data: {
+					pkg: package_
+				},
 				skip: (answers: { useCI?: boolean }) => {
 					if (!answers.useCI) {
 						return "Skipping CI file creation";
@@ -126,13 +140,15 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
 			{
 				type: "updateWorkspaceConfig",
 				data: {
-					type: "package"
+					type: "package",
+					pkg: package_
 				}
 			},
 			{
 				type: "runCommand",
 				data: {
-					command: "yarn install"
+					command: "yarn install",
+					pkg: package_
 				}
 			}
 		]
